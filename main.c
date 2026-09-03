@@ -17,8 +17,8 @@ int main(void) {
     printf("%d\n", w * h);*/
 
     // Test 04
-    int n = 5;
-    int arr[n];
+    /*int n = 5;
+    printft arr[n];
 
     for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
 
@@ -29,8 +29,22 @@ int main(void) {
         }
     }
 
-    printf("%d", best);
+    printf("%d", best);*/
 
+    // Test 05
+    char input[100];
+
+    scanf("%s", input);
+    
+    int iterator = 0;
+    int length = 0;
+
+    while (input[iterator] != '\0') {
+        iterator ++;
+        length ++;
+    }
+    
+    printf("%d", length);
 
     return 0;
 }
