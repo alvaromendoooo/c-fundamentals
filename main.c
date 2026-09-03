@@ -34,12 +34,16 @@ int main(void) {
     // Test 05
     char input[100];
 
-    scanf("%s", input);
-    
+    fgets(input, sizeof(input), stdin);
     int iterator = 0;
     int length = 0;
 
     while (input[iterator] != '\0') {
+        // Use case - \n included in string
+        if (input[iterator] == '\n') {
+            input[iterator] = '\0';
+            continue; // Check the while cond before it keeps iterating
+        }
         iterator ++;
         length ++;
     }
