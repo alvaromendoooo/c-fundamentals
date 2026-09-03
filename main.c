@@ -51,7 +51,7 @@ int main(void) {
     printf("%d", length);*/
 
     // Test 06
-    int number;
+    /*int number;
     
     scanf("%d", &number);
 
@@ -63,7 +63,19 @@ int main(void) {
         printf("Buzz");
     } else {
         printf("%d\n", number);
+    }*/
+
+    // Test 07
+    int n;
+
+    scanf("%d", &n);
+
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += i;
     }
+
+    printf("%d\n", sum);
 
     return 0;
 }
