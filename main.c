@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct { int x, y; } Point;
 
@@ -97,14 +98,32 @@ int main(void) {
     printf("%d %d\n", a, b);*/
 
     // Test 10
-    Point p1, p2;
+    /*Point p1, p2;
 
     scanf("%d %d %d %d", &p1.x, &p1.y, &p2.x, &p2.y);
 
     int dx = p1.x - p2.x;
     int dy = p1.y - p2.y;
 
-    printf("%d\n", dx * dx + dy * dy);
+    printf("%d\n", dx * dx + dy * dy);*/
+
+    // Test 11 
+    int n;
+    scanf("%d", &n);
+    
+    int *arr = malloc(n * (sizeof(int))); // Reserve a specific range of memory for the array
+    for (int i = 0; i < n; i++) {
+      scanf("%d", &arr[i]);
+    }
+
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+
+    printf("%d", sum);
+
+    free(arr);
 
     return 0;
 }
