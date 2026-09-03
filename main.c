@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+typedef struct { int x, y; } Point;
+
 int square(int n);
 void swap(int* a, int* b);
 
@@ -88,11 +90,21 @@ int main(void) {
     printf("%d\n", square(n));*/
 
     // Test 09
-    int a, b;
+    /*int a, b;
     scanf("%d %d", &a, &b);
     
     swap(&a, &b);
-    printf("%d %d\n", a, b);
+    printf("%d %d\n", a, b);*/
+
+    // Test 10
+    Point p1, p2;
+
+    scanf("%d %d %d %d", &p1.x, &p1.y, &p2.x, &p2.y);
+
+    int dx = p1.x - p2.x;
+    int dy = p1.y - p2.y;
+
+    printf("%d\n", dx * dx + dy * dy);
 
     return 0;
 }
