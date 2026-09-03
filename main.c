@@ -32,7 +32,7 @@ int main(void) {
     printf("%d", best);*/
 
     // Test 05
-    char input[100];
+    /*char input[100];
 
     fgets(input, sizeof(input), stdin);
     int iterator = 0;
@@ -48,7 +48,22 @@ int main(void) {
         length ++;
     }
     
-    printf("%d", length);
+    printf("%d", length);*/
+
+    // Test 06
+    int number;
+    
+    scanf("%d", &number);
+
+    if (number % 15 == 0) {
+        printf("FizzBuzz");
+    } else if (number % 3 == 0) {
+        printf("Fizz");
+    } else if (number % 5 == 0) {
+        printf("Buzz");
+    } else {
+        printf("%d\n", number);
+    }
 
     return 0;
 }
