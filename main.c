@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int square(int n);
+
 int main(void) {
     // Test 01
     //printf("Hello, C!\n");
@@ -66,7 +68,7 @@ int main(void) {
     }*/
 
     // Test 07
-    int n;
+    /*int n;
 
     scanf("%d", &n);
 
@@ -75,7 +77,18 @@ int main(void) {
         sum += i;
     }
 
-    printf("%d\n", sum);
+    printf("%d\n", sum);*/
+
+    // Test 08
+
+    int n;
+    scanf("%d", &n);
+
+    printf("%d\n", square(n));
 
     return 0;
+}
+
+int square(int n) {
+    return n * n;
 }
