@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int square(int n);
+void swap(int* a, int* b);
 
 int main(void) {
     // Test 01
@@ -81,14 +82,27 @@ int main(void) {
 
     // Test 08
 
-    int n;
+    /*int n;
     scanf("%d", &n);
 
-    printf("%d\n", square(n));
+    printf("%d\n", square(n));*/
+
+    // Test 09
+    int a, b;
+    scanf("%d %d", &a, &b);
+    
+    swap(&a, &b);
+    printf("%d %d\n", a, b);
 
     return 0;
 }
 
 int square(int n) {
     return n * n;
+}
+
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
