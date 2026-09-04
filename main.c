@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #define MAX_LENGTH 256
+#define CUBE(x) ((x) * (x) * (x))
 
 typedef struct { int x, y; } Point;
 
@@ -132,7 +133,7 @@ int main(void) {
     free(arr);*/
 
     // Test 12
-    int n;
+    /*int n;
     if (scanf("%d", &n) <= 0) return 1;
 
     getchar(); // Consume the leftover '\n' from typing the number
@@ -166,7 +167,13 @@ int main(void) {
 
     printf("lines: %d\n", count);
 
-    fclose(fo);
+    fclose(fo);*/
+
+    // Test 13
+    int n;
+    scanf("%d", &n);
+
+    printf("%d cubed is %d\n", n, CUBE(n));
 
     return 0;
 }
