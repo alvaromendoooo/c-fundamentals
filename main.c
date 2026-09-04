@@ -11,23 +11,23 @@ void swap(int* a, int* b);
 
 int main(void) {
     // Test 01
-    //printf("Hello, C!\n");
+    printf("Hello, C!\n");
     
     // Test 02
-    /*int a, b;
+    int a, b;
     
     scanf("%d %d", &a, &b);
-    printf("%d\n", a + b);*/
+    printf("%d\n", a + b);
     
     // Test 03
-    /*int w, h;
+    int w, h;
     
     scanf("%d %d", &w, &h);
-    printf("%d\n", w * h);*/
+    printf("%d\n", w * h);
 
     // Test 04
-    /*int n = 5;
-    printft arr[n];
+    int n = 5;
+    int arr[n];
 
     for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
 
@@ -38,10 +38,10 @@ int main(void) {
         }
     }
 
-    printf("%d", best);*/
+    printf("%d", best);
 
     // Test 05
-    /*char input[100];
+    char input[100];
 
     fgets(input, sizeof(input), stdin);
     int iterator = 0;
@@ -57,10 +57,10 @@ int main(void) {
         length ++;
     }
     
-    printf("%d", length);*/
+    printf("%d", length);
 
     // Test 06
-    /*int number;
+    int number;
     
     scanf("%d", &number);
 
@@ -72,10 +72,10 @@ int main(void) {
         printf("Buzz");
     } else {
         printf("%d\n", number);
-    }*/
+    }
 
     // Test 07
-    /*int n;
+    int n;
 
     scanf("%d", &n);
 
@@ -84,34 +84,34 @@ int main(void) {
         sum += i;
     }
 
-    printf("%d\n", sum);*/
+    printf("%d\n", sum);
 
     // Test 08
 
-    /*int n;
+    int n;
     scanf("%d", &n);
 
-    printf("%d\n", square(n));*/
+    printf("%d\n", square(n));
 
     // Test 09
-    /*int a, b;
+    int a, b;
     scanf("%d %d", &a, &b);
     
     swap(&a, &b);
-    printf("%d %d\n", a, b);*/
+    printf("%d %d\n", a, b);
 
     // Test 10
-    /*Point p1, p2;
+    Point p1, p2;
 
     scanf("%d %d %d %d", &p1.x, &p1.y, &p2.x, &p2.y);
 
     int dx = p1.x - p2.x;
     int dy = p1.y - p2.y;
 
-    printf("%d\n", dx * dx + dy * dy);*/
+    printf("%d\n", dx * dx + dy * dy);
 
     // Test 11 
-    /*int n;
+    int n;
     scanf("%d", &n);
     
     int *arr = malloc(n * (sizeof(int))); // Reserve a specific range of memory for the array
@@ -130,10 +130,10 @@ int main(void) {
 
     printf("%d", sum);
 
-    free(arr);*/
+    free(arr);
 
     // Test 12
-    /*int n;
+    int n;
     if (scanf("%d", &n) <= 0) return 1;
 
     getchar(); // Consume the leftover '\n' from typing the number
@@ -167,7 +167,7 @@ int main(void) {
 
     printf("lines: %d\n", count);
 
-    fclose(fo);*/
+    fclose(fo);
 
     // Test 13
     int n;
