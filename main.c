@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX_LENGTH 256
+
 typedef struct { int x, y; } Point;
 
 int square(int n);
@@ -108,10 +110,14 @@ int main(void) {
     printf("%d\n", dx * dx + dy * dy);*/
 
     // Test 11 
-    int n;
+    /*int n;
     scanf("%d", &n);
     
     int *arr = malloc(n * (sizeof(int))); // Reserve a specific range of memory for the array
+    if (arr == NULL) {
+        return 1;
+    }
+
     for (int i = 0; i < n; i++) {
       scanf("%d", &arr[i]);
     }
@@ -123,7 +129,44 @@ int main(void) {
 
     printf("%d", sum);
 
-    free(arr);
+    free(arr);*/
+
+    // Test 12
+    int n;
+    if (scanf("%d", &n) <= 0) return 1;
+
+    getchar(); // Consume the leftover '\n' from typing the number
+    
+    FILE *fp = fopen("/tmp/clines.txt", "w");
+    if (fp == NULL) {
+        perror("/tmp/clines.txt");
+        return 1;
+    }
+
+    char buffer[MAX_LENGTH];
+    
+    for(int i = 0; i < n; i++) {
+        if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+            fputs(buffer, fp);
+        }
+    }
+    fclose(fp);
+
+    int count = 0;
+    FILE *fo = fopen("/tmp/clines.txt", "r");
+    if (fo == NULL) {
+        perror("/tmp/clines.txt");
+        return 1;
+    }
+
+    char line[MAX_LENGTH];
+    while (fgets(line, sizeof(line), fo) != NULL) {
+        count += 1;
+    }
+
+    printf("lines: %d\n", count);
+
+    fclose(fo);
 
     return 0;
 }
